@@ -33,6 +33,6 @@ def update_time():
 timelabel = Label(display,text="", font=("Helvetica", 50, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
 timelabel.place(relx=0.5, y=118, anchor="center")
 
-#display.after(250, force_fullscreen)
+display.after(250, force_fullscreen)
 update_time()
 display.mainloop()
