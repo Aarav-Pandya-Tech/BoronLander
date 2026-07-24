@@ -10,7 +10,7 @@ display.resizable(False,False)
 display.title("Boron Lander")
 
 #The bg is set
-original_image = Image.open(r"C:\Users\ScipoTech\Downloads\boronbackg.jpg")
+original_image = Image.open("boronbackg.jpg")
 bg_image = ImageTk.PhotoImage(original_image)
 
 # Create the label placeholder for bg
