@@ -8,7 +8,8 @@ display = Tk()
 display.geometry("320x480")
 display.resizable(False,False)
 display.title("Boron Lander")
-display.attributes('-fullscreen', True)
+def force_fullscreen():
+    display.attributes('-fullscreen', True)
 
 #The bg is set
 original_image = Image.open("boronbackg.jpg")
@@ -32,5 +33,6 @@ def update_time():
 timelabel = Label(display,text="", font=("Helvetica", 53, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
 timelabel.place(relx=0.5, y=124, anchor="center")
 
+root.after(250, force_fullscreen)
 update_time()
 display.mainloop()
