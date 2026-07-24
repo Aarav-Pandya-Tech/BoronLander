@@ -5,7 +5,7 @@ import time
 
 #GUI prperties
 display = Tk()
-display.geometry("480x800")
+display.geometry("320x480")
 display.resizable(False,False)
 display.title("Boron Lander")
 display.attributes('-fullscreen', True)
