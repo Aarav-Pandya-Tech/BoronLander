@@ -29,7 +29,8 @@ def update_time():
     time_current = time.strftime("%H:%M")
     timelabel.config(text=time_current)
     timelabel.after(1000, update_time)
-timelabel = Label(display,text="", font=("Helvetica", 85, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-timelabel.place(relx=0.5, y=240, anchor="center")
+timelabel = Label(display,text="", font=("Helvetica", 53, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
+timelabel.place(relx=0.5, y=124, anchor="center")
+
 update_time()
 display.mainloop()
