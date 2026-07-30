@@ -54,14 +54,14 @@ def force_fullscreen():
     display.attributes('-fullscreen', True)
 
 #The bg is set
-original_image = Image.open("boronbackg.jpg")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
+original_image = Image.open(r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
 bg_image = ImageTk.PhotoImage(original_image)
 
 # Create the label placeholder for bg
 bg_label = Label(display, image=bg_image)
 bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
-edit_image = Image.open("editbutton.jpg")#r"/home/shariq/Desktop/BoronLander/editbutton.jpg")#change location
+edit_image = Image.open(r"/home/shariq/Desktop/BoronLander/editbutton.jpg")#r"/home/shariq/Desktop/BoronLander/editbutton.jpg")#change location
 edittk_image = ImageTk.PhotoImage(edit_image)
 
 # Create the label placeholder for bg
@@ -76,7 +76,7 @@ timelabel = Label(display,text="", font=("Helvetica", 50, "bold","italic"), fg="
 timelabel.place(relx=0.5, y=118, anchor="center")
 
 
-weather_image = Image.open(f"{get_icon()}_t@4x.png")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
+weather_image = Image.open(fr"/home/shariq/Desktop/BoronLander/{get_icon()}_t@4x.png")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
 start_x = 20
 start_y = 40
 crop_w = 180
