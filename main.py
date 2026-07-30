@@ -179,7 +179,7 @@ def shutdown_system():
 sb_image = Image.open(r"/home/shariq/Desktop/BoronLander/sb.jpg")#r"/home/shariq/Desktop/BoronLander/editbutton.jpg")#change location
 sbtk_image = ImageTk.PhotoImage(sb_image)
 sb_button = Button(display, image=sbtk_image,bg="#7ae7ff",command= shutdown_system,relief="flat",activebackground="#7ae7ff")
-sb_button.place(relx= 1, y=0)
+sb_button.place(relx= 1.0, anchor="ne", y=0)
 
 
 
