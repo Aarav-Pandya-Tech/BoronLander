@@ -5,6 +5,9 @@ import time
 import requests 
 import adafruit_dht
 import board
+import os
+from tkinter import messagebox
+
 d = adafruit_dht.DHT22(board.D26)
 
 
@@ -161,9 +164,22 @@ h.place(x=110, y=240)
 
 
 
+def shutdown_system():
+    """Ask for confirmation and shut down the system."""
+    confirm = messagebox.askyesno("Confirm Shutdown", "Are you sure you want to shut down the system?")
+    if confirm:
+        try:
+            # Linux shutdown command (requires sudo privileges)
+            exit_code = os.system("sudo shutdown now")
+            if exit_code != 0:
+                messagebox.showerror("Error", "Shutdown command failed. Try running the script with sudo.")
+        except Exception as e:
+            messagebox.showerror("Error", f"An error occurred: {e}")
 
-
-
+sb_image = Image.open(r"/home/shariq/Desktop/BoronLander/sb.jpg")#r"/home/shariq/Desktop/BoronLander/editbutton.jpg")#change location
+sbtk_image = ImageTk.PhotoImage(sb_image)
+sb_button = Button(display, image=sbtk_image,bg="#7ae7ff",command= shutdown_system,relief="flat",activebackground="#7ae7ff")
+sb_button.place(relx= 1, y=0)
 
 
 
