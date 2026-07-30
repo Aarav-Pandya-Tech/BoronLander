@@ -75,8 +75,7 @@ def update_time():
     timelabel.config(text=time_current)
     timelabel.after(1000, update_time)
 timelabel = Label(display,text="", font=("Helvetica", 50, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-timelabel.place(relx=0.5, y=118, anchor="center")
-
+timelabel.place(x=110, y=118)
 
 weather_image = Image.open(fr"/home/shariq/Desktop/BoronLander/{get_icon()}_t@4x.png")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
 start_x = 20
@@ -145,7 +144,7 @@ def update_t():
     t.config(text=temp)
     timelabel.after(10, update_t)
 t = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-t.place(x= 120, y=172)
+t.place(x= 110, y=172)
 
 
 
@@ -157,7 +156,7 @@ def update_h():
     h.config(text=humidity)
     timelabel.after(10, update_h)
 h = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-h.place(x=120, y=240)
+h.place(x=110, y=240)
 
 
 
