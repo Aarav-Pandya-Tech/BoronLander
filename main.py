@@ -138,7 +138,11 @@ def update_weather():
 
 
 def update_t():
-    t.config(text=f"{d.temperature}°C")
+    try:
+        temp = f"{d.temperature}°C"
+    except:
+        temp = "NotFound"
+    t.config(text=temp)
     timelabel.after(10, update_t)
 t = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
 t.place(x= 100, y=200)
@@ -146,7 +150,11 @@ t.place(x= 100, y=200)
 
 
 def update_h():
-    h.config(text=f"{d.humidity}%")
+    try:
+        humidity = f"{d.humidity}%"
+    except:
+        humidity = "NotFound"
+    h.config(text=humidity)
     timelabel.after(10, update_h)
 h = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
 h.place(x=100, y=260)
