@@ -145,7 +145,7 @@ def update_t():
     t.config(text=temp)
     timelabel.after(10, update_t)
 t = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-t.place(x= 110, y=187)
+t.place(x= 110, y=167)
 
 
 
