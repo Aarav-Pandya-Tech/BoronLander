@@ -3,7 +3,9 @@ from tkinter import *
 from PIL import Image, ImageTk
 import time
 import requests 
-
+import adafruit_dht
+import board
+d = adafruit_dht.DHT22(board.D26)
 
 
 api = "0db0cbf680c57180da22dc545cbfb94e" 
@@ -135,9 +137,22 @@ def update_weather():
 
 
 
+def update_h():
+    h.config(text="32%")
+    timelabel.after(2000, update_h)
+h = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
+h.place(relx=0.5, y=200, anchor="center")
+
+
+
+
+
+
+
+
 
 display.after(250, force_fullscreen)
-
+update_h()
 update_time()
 update_weather()
 display.mainloop()
