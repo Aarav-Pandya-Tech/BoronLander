@@ -75,7 +75,7 @@ def update_time():
     timelabel.config(text=time_current)
     timelabel.after(1000, update_time)
 timelabel = Label(display,text="", font=("Helvetica", 50, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-timelabel.place(relx=0.5, y=118, anchor="center")
+timelabel.place(relx=0.48, y=118)
 
 
 weather_image = Image.open(fr"/home/shariq/Desktop/BoronLander/{get_icon()}_t@4x.png")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
