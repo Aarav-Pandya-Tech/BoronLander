@@ -129,7 +129,7 @@ def update_weather():
 
     weather_label.config(text=get_weatherdata())
 
-    icon_label.after(1000,lambda: update_weather())
+    icon_label.after(60000,lambda: update_weather())
 
 
 
