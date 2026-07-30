@@ -139,7 +139,7 @@ def update_weather():
 
 def update_t():
     t.config(text=f"{d.temperature}°C")
-    timelabel.after(2000, update_t)
+    timelabel.after(10, update_t)
 t = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
 t.place(relx=0.5, y=200, anchor="center")
 
@@ -147,9 +147,9 @@ t.place(relx=0.5, y=200, anchor="center")
 
 def update_h():
     h.config(text=f"{d.humidity}%")
-    timelabel.after(2000, update_h)
+    timelabel.after(10, update_h)
 h = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-h.place(relx=0.5, y=250, anchor="center")
+h.place(relx=0.5, y=310, anchor="center")
 
 
 
