@@ -149,7 +149,7 @@ def update_h():
     h.config(text=f"{d.humidity}%")
     timelabel.after(10, update_h)
 h = Label(display,text="", font=("Helvetica", 35, "bold","italic"), fg="#2d4259", bg="#7ae7ff")
-h.place(relx=0.5, y=310, anchor="center")
+h.place(relx=0.5, y=280, anchor="center")
 
 
 
