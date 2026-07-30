@@ -101,7 +101,7 @@ weather_label = Label(display, text=get_weatherdata(), font=("Helvetica", 10, "b
 weather_label.place(relx=0.5,anchor="center", y=435)
 
 def update_weather():
-    weather_image = Image.open(f"{get_icon()}_t@4x.png")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
+    weather_image = Image.open(fr"/home/shariq/Desktop/BoronLander/{get_icon()}_t@4x.png")#r"/home/shariq/Desktop/BoronLander/boronbackg.jpg")#change locantion
     start_x = 20
     start_y = 40
     crop_w = 180
