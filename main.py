@@ -166,15 +166,15 @@ h.place(x=110, y=240)
 
 def shutdown_system():
     """Ask for confirmation and shut down the system."""
-    confirm = messagebox.askyesno("Confirm Shutdown", "Are you sure you want to shut down the system?")
+    confirm = messagebox.askyesno("Confirm Shutdown", "Are you sure you want to \nshut down the system?")
     if confirm:
         try:
             # Linux shutdown command (requires sudo privileges)
             exit_code = os.system("sudo shutdown now")
             if exit_code != 0:
-                messagebox.showerror("Error", "Shutdown command failed. Try running the script with sudo.")
+                messagebox.showerror("Error", "Shutdown command\nfailed. \nCall Aarav!")
         except Exception as e:
-            messagebox.showerror("Error", f"An error occurred: {e}")
+            messagebox.showerror("Error", f"An error occurred!\nCall Aarav!")
 
 sb_image = Image.open(r"/home/shariq/Desktop/BoronLander/sb.jpg")#r"/home/shariq/Desktop/BoronLander/editbutton.jpg")#change location
 sbtk_image = ImageTk.PhotoImage(sb_image)
